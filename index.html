@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validador de Formulario</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="leftside">
+        <img src="./images/illustration.svg" alt="" />
+      </div>
+      <div class="rightside">
+        <h1>Crie uma conta</h1>
+
+        <form action="POST" action="cadastro.php" class="b7validator">
+          <label>
+            Seu nome: <br />
+            <input type="text" name="name" data-rules="required|min=2" />
+          </label>
+
+          <label>
+            Seu e-mail: <br />
+            <input type="text" name="email" data-rules="required|email" />
+          </label>
+
+          <label>
+            Seu senha: <br />
+            <input
+              type="password"
+              name="password"
+              data-rules="required|min=4"
+            />
+          </label>
+
+          <label>
+            Confirme sua senha: <br />
+            <input
+              type="password"
+              name="confirmPassword"
+              data-rules="required|min=4|confirm"
+            />
+          </label>
+
+          <label>
+            <input type="submit" value="Cadastrar" />
+          </label>
+        </form>
+
+        <div>Já tem um conta? <a href="">Faça o Login</a></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
